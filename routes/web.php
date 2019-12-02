@@ -12,14 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/main', function () {
     return view('mainPage');
 });
+
 Route::get('/more_detail', function () {
     return view('detailProduct');
 });
+
+Route::resource('/contact','ContactController');
 
 Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('home');

@@ -1,4 +1,7 @@
 /* your styles go here */
+#allert{
+  position: fixed;
+}
 #myBtnContact {
     position: fixed;
     bottom: 46%;

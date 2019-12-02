@@ -30,7 +30,7 @@
     </head>
     <body>
         <a href="/#4"><button id="myBtnContact" title="Order Now!">Order Now</button></a>
-        <a href="/#3"><button id="myBtnHome" title="Back to Home Page">Home</button></a>
+        <a href="/"><button id="myBtnHome" title="Back to Home Page">Home</button></a>
         <div class="main">
             <section id="1">
                 <div class="d-flex h-100 align-items-center">

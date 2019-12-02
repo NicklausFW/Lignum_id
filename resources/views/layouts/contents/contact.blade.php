@@ -6,23 +6,24 @@
             </header>
             <div class="row">
               <div class="col-lg-6">
-                <form action="" class="contact-form">
+                <form action="{{route('contact.store')}}" method="post" class="contact-form">
+                @csrf
                   <div class="row">
                     <div class="form-group col-lg-6">
                       <label for="firstName">Your firstname *</label>
-                      <input id="firstName" type="text" name="firstname" placeholder="Enter your firstname" class="form-control">
+                      <input id="firstName" type="text" name="firstname" placeholder="Enter your firstname" class="form-control" required>
                     </div>
                     <div class="form-group col-lg-6">
                       <label for="lastName">Your lastname *</label>
-                      <input id="lastName" type="text" name="lastname" placeholder="Enter your lastname" class="form-control">
+                      <input id="lastName" type="text" name="lastname" placeholder="Enter your lastname" class="form-control"required>
                     </div>
                     <div class="form-group col-lg-12">
                       <label for="email">Your email *</label>
-                      <input id="email" type="email" name="email" placeholder="Enter your email" class="form-control">
+                      <input id="email" type="email" name="email" placeholder="Enter your email" class="form-control"required>
                     </div>
                     <div class="form-group col-lg-12">
                       <label for="message">Your message for us *</label>
-                      <textarea id="message" name="message" placeholder="Enter your message" class="form-control"></textarea>
+                      <textarea id="message" name="message" placeholder="Enter your message" class="form-control"required></textarea>
                     </div>
                     <div class="form-group col-lg-12">
                       <button type="submit" class="btn btn-outline-primary w-100">Send message</button>
@@ -41,6 +42,9 @@
                   <li class="list-inline-item"><a href="#" class="social-link social-link-email"><i class="fas fa-envelope"></i></a></li>
                 </ul>
               </div>
+            </div>
+            <div id="allert">
+              @include('inc.message')
             </div>
             <footer class="py-5 mt-5">
               <div class="row">
