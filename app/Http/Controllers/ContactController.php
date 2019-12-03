@@ -43,6 +43,7 @@ class ContactController extends Controller
         ]);
         // Membuat object dari Model Post
         Contact::create($request->all());
+
         return view('/#4');
     }
 

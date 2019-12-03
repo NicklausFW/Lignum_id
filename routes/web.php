@@ -19,6 +19,8 @@ Route::get('/more_detail', function () {
     return view('detailProduct');
 });
 
+Route::get('/send/email', 'HomeController@mail');
+
 Route::resource('/contact','ContactController');
 
 Auth::routes();
