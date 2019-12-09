@@ -103,17 +103,17 @@ class ProductsController extends Controller
     }
     else{
         if(!$product->image)
-     $file='';
-     else 
-     $file=$product->image;
+        $file='';
+        else 
+        $file=$product->image;
     }
-      $product->product_name=$request->product_name;
-      $product->price=$request->price;
-      $product->promo=$request->promo;
-      $product->description=$request->description;
-      $product->image=$file;
-      $product->save();
-      return redirect()->route('admin.products.index');
+        $product->product_name=$request->product_name;
+        $product->price=$request->price;
+        $product->promo=$request->promo;
+        $product->description=$request->description;
+        $product->image=$file;
+        $product->save();
+        return redirect()->route('admin.products.index');
     }
 
     /**
