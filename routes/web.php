@@ -10,19 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*Route home view */
+Route::get('/', 'PageController@main');
+Route::get('/more_detail', 'PageController@detail');
 
-Route::get('/', function () {
-    return view('mainPage');
-});
-
-Route::get('/more_detail', function () {
-    return view('detailProduct');
-});
-
-Route::get('/send/email', 'HomeController@mail');
-
+/*Route contact */
+Route::get('/send/email', 'AdminController@mail');
+/*Route  */
 Route::resource('/contact','ContactController');
 
 Auth::routes();
-Route::get('/admin', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'AdminController@index')->name('home');
 Route::resource('/admin/products', 'Admin\ProductsController', ['as'=>'admin']);
