@@ -99,14 +99,13 @@ class ProductsController extends Controller
             $ext = $request->image->getClientOriginalExtension(); 
             $file= date('YmdHis').rand(1,99999).'.'.$ext;
             $request->image->storeAs('public/products',$file);
-            echo "1";
-    }
-    else{
-        if(!$product->image)
-        $file='';
-        else 
-        $file=$product->image;
-    }
+        }
+        else{
+            if(!$product->image)
+            $file='';
+            else 
+            $file=$product->image;
+        }
         $product->product_name=$request->product_name;
         $product->price=$request->price;
         $product->promo=$request->promo;
