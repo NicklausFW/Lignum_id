@@ -43,9 +43,8 @@ class ProductsController extends Controller
     {   
         if($request->image->getClientOriginalName())
         {
-        $ext = $request->image->getClientOriginalExtension(); 
-        $file= date('YmdHis').rand(1,99999).'.'.$ext;
-        $request->image->storeAs('public/products',$file);
+            $file= $request->image->getClientOriginalName();
+            $request->image->storeAs('public/img/product_photo/',$file);
         }
             else
             {
@@ -95,10 +94,10 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        if(isset($request->image) && $request->image->getClientOriginalName()){
-            $ext = $request->image->getClientOriginalExtension(); 
-            $file= date('YmdHis').rand(1,99999).'.'.$ext;
-            $request->image->storeAs('public/products',$file);
+        if(isset($request->image) && $request->image->getClientOriginalName())
+        {
+            $file= $request->image->getClientOriginalName();
+            $request->image->storeAs('public/img/product_photo/',$file);
         }
         else{
             if(!$product->image)
