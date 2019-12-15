@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMailable;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,14 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
-
-    public function mail()
-    {
-    $name = 'ini dari lignum';
-    Mail::to('davad.tandjung@gmail.com')->send(new SendMailable($name));
-    
-    return 'Email was sent';
+    return view('home');
     }
 }

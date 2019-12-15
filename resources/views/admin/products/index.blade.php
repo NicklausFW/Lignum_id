@@ -6,12 +6,6 @@
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Products</h1>
           </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Products</li>
-            </ol>
-          </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -39,14 +33,13 @@
       <td>{{ $c->price }} </td>
       <td>{{ $c->promo}} </td>
       <td>{{ $c->description }} </td>
-      <td><img src="<?php echo asset('storage/products/'.$c->image)?>" style="width:150px;"></img></td>
+      <td><img src="<?php echo asset('img/product_photo/'.$c->image)?>" style="width:150px;"></img></td>
       <td>
       <a href="{{route('admin.products.edit',$c->id)}}" class="btn btn-info">Edit</a>
       <a href="javascript::void(0)" onclick="$(this).parent().find('form').submit()" class="btn btn-danger">Delete</a>
       <form action="{{route('admin.products.destroy',$c->id)}}" method="post"> 
       @method('DELETE')
       <input type="hidden" name="_token" value="{{ csrf_token()}}">
-      
       </form>
       </td>
       </tr>
