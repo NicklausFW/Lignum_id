@@ -23,3 +23,6 @@ Auth::routes(['verify' => true]);
 
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware('verified');
 Route::resource('/admin/products', 'Admin\ProductsController', ['as'=>'admin']);
+Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
+Route::get('pdf','PDFMaker@gen');
+
