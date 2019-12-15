@@ -25,3 +25,4 @@ Route::get('/admin', 'AdminController@index')->name('admin')->middleware('verifi
 Route::resource('/admin/products', 'Admin\ProductsController', ['as'=>'admin']);
 Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
 Route::get('/admin/pdf','PDFMaker@gen');
+Route::get('/admin', 'HomeController@index')->name('home');

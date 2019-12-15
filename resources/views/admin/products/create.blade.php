@@ -32,7 +32,7 @@
      <div class="col-md-6"><input type="text" name="promo" class="form-control"> </div> 
      &nbsp;
      <label class ="col-md-3">description</label>
-     <div class="col-md-6"><input type="text" name="description" > </div> 
+     <div class="col-md-6"><input type="text" name="description" class="form-control"> </div> 
      &nbsp;
      <label class ="col-md-3">image</label>
      <div class="col-md-6"><input type="file" name="image" > </div> 
