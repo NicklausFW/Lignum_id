@@ -27,4 +27,4 @@ Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('home');
 Route::resource('/admin/products', 'Admin\ProductsController', ['as'=>'admin']);
 Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
-Route::get('pdf','PDFMaker@gen');
+Route::get('/admin/pdf','PDFMaker@gen');
