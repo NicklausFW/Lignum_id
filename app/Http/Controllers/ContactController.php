@@ -14,8 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $arr['contact'] = Contact::all();
-        return view('admin.message.index')->with($arr);
+        //
     }
 
     /**
@@ -44,7 +43,8 @@ class ContactController extends Controller
         ]);
         // Membuat object dari Model Post
         Contact::create($request->all());
-        return redirect('/#4');
+
+        return view('/#4');
     }
 
     /**
@@ -89,7 +89,6 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        Contact::destroy($id);
-        return redirect()->route('contact.index');
+        //
     }
 }

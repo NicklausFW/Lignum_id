@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script>-->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -76,22 +76,5 @@
             @yield('content')
         </main>
     </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script> 
-    $('.btn-refresh').click(function(){
-        $.ajax({
-                type: 'GET',
-                url: '{{ url('/refresh_captcha')}}',
-                success: function(data){
-                    $('.captcha span').html(data);
-                }
-        });
-    });
-
-    </script>
-
-
 </body>
 </html>

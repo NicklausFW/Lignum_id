@@ -47,19 +47,19 @@ class ProductsController extends Controller
         $file= date('YmdHis').rand(1,99999).'.'.$ext;
         $request->image->storeAs('public/products',$file);
         }
-            else
-            {
-            $file = '';
-            }
-        
-        $product->image=$file;
-        $product->product_name=$request->product_name;
-        $product->price=$request->price;
-        $product->promo=$request->promo;
-        $product->description=$request->description;
-        
-        $product->save();
-        return redirect()->route('admin.products.index');
+         else
+         {
+         $file = '';
+         }
+     
+      $product->image=$file;
+      $product->product_name=$request->product_name;
+      $product->price=$request->price;
+      $product->promo=$request->promo;
+      $product->description=$request->description;
+      
+      $product->save();
+      return redirect()->route('admin.products.index');
     }
 
     /**
@@ -99,13 +99,14 @@ class ProductsController extends Controller
             $ext = $request->image->getClientOriginalExtension(); 
             $file= date('YmdHis').rand(1,99999).'.'.$ext;
             $request->image->storeAs('public/products',$file);
-        }
-        else{
-            if(!$product->image)
-            $file='';
-            else 
-            $file=$product->image;
-        }
+            echo "1";
+    }
+    else{
+        if(!$product->image)
+        $file='';
+        else 
+        $file=$product->image;
+    }
         $product->product_name=$request->product_name;
         $product->price=$request->price;
         $product->promo=$request->promo;

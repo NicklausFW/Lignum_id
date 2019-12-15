@@ -10,19 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*Route home view */
-Route::get('/', 'PageController@main');
-Route::get('/more_detail', 'PageController@detail');
 
-/*Route contact */
-Route::get('/send/email', 'AdminController@mail');
-/*Route  */
+Route::get('/', function () {
+    return view('mainPage');
+});
+
+Route::get('/more_detail', function () {
+    return view('detailProduct');
+});
+
+Route::get('/send/email', 'HomeController@mail');
+
 Route::resource('/contact','ContactController');
 
-Auth::routes(['verify' => true]);
-
-Route::get('/admin', 'AdminController@index')->name('admin')->middleware('verified');
+Auth::routes();
+Route::get('/admin', 'HomeController@index')->name('home');
 Route::resource('/admin/products', 'Admin\ProductsController', ['as'=>'admin']);
-Route::get('/refresh_captcha','Auth\RegisterController@refreshCaptcha')->name('refresh');
-Route::get('/admin/pdf','PDFMaker@gen');
-Route::get('/product', 'HomeController@index')->name('home');

@@ -61,30 +61,6 @@
                             </div>
                         </div>
 
-
-
-
-
-                        <div class="form-group row">
-                            <label for="captcha" class="col-md-4 col-form-label text-md-right">{{ __('Captcha') }}</label>
-
-                            <div class="col-md-6">
-                            <div class="captcha">
-                            <span>{!! captcha_img('math') !!}</span>
-                            <button type="button" class="btn btn-success btn-refresh">Refresh</button>
-                            </div>
-                                <input id="captcha" type="text" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" placeholder="Enter captcha">
-
-                                @error('captcha')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
