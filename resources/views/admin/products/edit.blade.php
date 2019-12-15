@@ -42,7 +42,7 @@
      @if($product->image)
      <div class="col-md-3"></div>    
      <div class="col-md-9"> 
-     <img src="{{ asset('storage/products/'.$product->image) }}" style="width:150px;">
+     <img src="{{ asset('img/product_photo/'.$product->image) }}" style="width:150px;">
      </div>
      <div class="clearfix"></div>
      @endif

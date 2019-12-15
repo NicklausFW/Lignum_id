@@ -32,101 +32,47 @@
         <a href="/#4"><button id="myBtnContact" title="Order Now!">Order Now</button></a>
         <a href="/"><button id="myBtnHome" title="Back to Home Page">Home</button></a>
         <div class="main">
-            <section id="1">
+            @foreach($products as $p)
+            @if($loop->iteration%2 == 0)
+            <section id="{{$loop->iteration}}">
                 <div class="d-flex h-100 align-items-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6 mb-4 mb-lg-0">
-                                <img src="img/product_photo/sikat_gigi.jpg" alt="..." class="img-fluid d-block mx-auto">
+                                <img src=<?php echo asset('img/product_photo/'.$p->image)?> alt="..." class="img-fluid d-block mx-auto">
                             </div>
                             <div class="col-lg-6">
                                 <header class="text-center">
-                                    <h2 class="text-uppercase lined">Sikat Gigi</h2>
+                                    <h2 class="text-uppercase lined">{{ $p->product_name }}</h2>
                                 </header>
-                                <p class="lead">This can be an about section or anything else ;)</p>
-                                <p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind next many near nay. He exquisite continued explained middleton am. Voice hours young woody has she think equal. Estate moment he at on wonder at season little. Six garden result summer set family esteem nay estate. End admiration mrs unreserved discovered comparison especially invitation.</p>
-                                <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
+                                <p class="lead">Harga : {{ $p->price }} /pcs</p>
+                                <p class="lead">{{ $p->description }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="1">
-                <div class="d-flex h-100 align-items-center">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <header class="text-center">
-                                    <h2 class="text-uppercase lined">Sendok & Garpu</h2>
-                                </header>
-                                <p class="lead">This can be an about section or anything else ;)</p>
-                                <p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind next many near nay. He exquisite continued explained middleton am. Voice hours young woody has she think equal. Estate moment he at on wonder at season little. Six garden result summer set family esteem nay estate. End admiration mrs unreserved discovered comparison especially invitation.</p>
-                                <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
-                            </div>
-                            <div class="col-lg-6">
-                                <img src="img/product_photo/sendok_garpu.jpg" alt="..." class="img-fluid d-block mx-auto">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="1">
-                <div class="d-flex h-100 align-items-center">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <img src="img/product_photo/sumpit.jpg" alt="..." class="img-fluid d-block mx-auto">
-                            </div>
-                            <div class="col-lg-6">
-                                <header class="text-center">
-                                    <h2 class="text-uppercase lined">Sumpit</h2>
-                                </header>
-                                <p class="lead">This can be an about section or anything else ;)</p>
-                                <p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind next many near nay. He exquisite continued explained middleton am. Voice hours young woody has she think equal. Estate moment he at on wonder at season little. Six garden result summer set family esteem nay estate. End admiration mrs unreserved discovered comparison especially invitation.</p>
-                                <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            @else
             <section id="1">
                 <div class="d-flex h-100 align-items-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6 mb-4 mb-lg-0">
                                 <header class="text-center">
-                                    <h2 class="text-uppercase lined">Alas Gelas</h2>
+                                    <h2 class="text-uppercase lined">{{ $p->product_name }}</h2>
                                 </header>
-                                <p class="lead">This can be an about section or anything else ;)</p>
-                                <p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind next many near nay. He exquisite continued explained middleton am. Voice hours young woody has she think equal. Estate moment he at on wonder at season little. Six garden result summer set family esteem nay estate. End admiration mrs unreserved discovered comparison especially invitation.</p>
-                                <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
+                                <p class="lead">Harga : {{ $p->price }} /pcs</p>
+                                <p class="lead">{{ $p->description }}</p>
                             </div>
                             <div class="col-lg-6">
-                                <img src="img/product_photo/alas_gelas.jpg" alt="..." class="img-fluid d-block mx-auto">
+                                <img src=<?php echo asset('img/product_photo/'.$p->image)?> alt="..." class="img-fluid d-block mx-auto">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="1">
-                <div class="d-flex h-100 align-items-center">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <img src="img/product_photo/tempat_sambel.jpg" alt="..." class="img-fluid d-block mx-auto">
-                            </div>
-                            <div class="col-lg-6">
-                                <header class="text-center">
-                                    <h2 class="text-uppercase lined">Piring Kecil untuk Saus</h2>
-                                </header>
-                                <p class="lead">This can be an about section or anything else ;)</p>
-                                <p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind next many near nay. He exquisite continued explained middleton am. Voice hours young woody has she think equal. Estate moment he at on wonder at season little. Six garden result summer set family esteem nay estate. End admiration mrs unreserved discovered comparison especially invitation.</p>
-                                <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            @endif
+            @endforeach
         </div>
         <!-- JavaScript files-->
         <script src="vendor/jquery/jquery.min.js"></script>
