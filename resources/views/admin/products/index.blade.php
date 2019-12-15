@@ -18,7 +18,7 @@
     <!-- /.content-header -->
     <section class="content">
       <div class="container-fluid">
-      <p>
+      <p> <a href="/lignum/public/pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
           <a href="{{route('admin.products.create')}}" class="btn btn-primary">Add New Products</a> 
       </p>
       <table class="table table-bordered table-striped"> 
