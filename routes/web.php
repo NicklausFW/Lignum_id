@@ -19,7 +19,7 @@ Route::get('/send/email', 'AdminController@mail');
 /*Route  */
 Route::resource('/contact','ContactController');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/admin', 'AdminController@index')->name('home');
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware('verified');
 Route::resource('/admin/products', 'Admin\ProductsController', ['as'=>'admin']);
