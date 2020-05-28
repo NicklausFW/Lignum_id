@@ -32,8 +32,8 @@
                 </form>
               </div>
               <div class="col-lg-6">
-                <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.</p>
-                <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh.</p>
+                <p>Contact us with any questions or inqueries or call 087860827495. We sehould be happy to answer your questions. Reach out to us and we'll respond as soon as we can.</p>
+                <p>Even if there is an issue that you would like to inform us. Let us know and we'll do our best to solve the issue.</p>
                 <ul class="mb-0 list-inline text-center">
                   <li class="list-inline-item"><a href="#" class="social-link social-link-facebook"><i class="fab fa-facebook-f"></i></a></li>
                   <li class="list-inline-item"><a href="#" class="social-link social-link-twitter"><i class="fab fa-twitter"></i></a></li>
