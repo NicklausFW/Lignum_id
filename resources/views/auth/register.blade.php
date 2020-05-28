@@ -73,7 +73,8 @@
                             <span>{!! captcha_img('math') !!}</span>
                             <button type="button" class="btn btn-success btn-refresh">Refresh</button>
                             </div>
-                                <input id="captcha" type="text" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" placeholder="Enter captcha">
+                                <input id="captcha" type="text" class="form-control mt-2 @error('captcha')
+                                 is-invalid @enderror" name="captcha" placeholder="Enter captcha">
 
                                 @error('captcha')
                                     <span class="invalid-feedback" role="alert">
